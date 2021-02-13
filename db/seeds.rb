@@ -10,12 +10,12 @@ users = User.create([{ name: 'Ivanov' },{ name: 'Petrov' },{ name: 'Vasechkin' }
 
 categories = Category.create([{ title: 'Логика' }, { title: 'Английский язык' }, { title: 'Философия' }])
 
-tests = Test.create([{ title: 'Основные законы логики', level: 0, category_id: categories.first.id },
-                     { title: 'Понятие ', level: 1, category_id: categories[0].id },
-                     { title: 'To be', level: 0, category_id: categories[1].id },
-                     { title: 'Present Simple или Past Simple', level: 1, category_id: categories[1].id },
-                     { title: 'История античной и средневековой философии', level: 0, category_id: categories[2].id },
-                     { title: 'Социальная философия', level: 1, category_id: categories[2].id }])
+tests = Test.create([{ title: 'Основные законы логики', level: 0, category_id: categories.first.id, author_id: users.first.id },
+                     { title: 'Понятие ', level: 1, category_id: categories[0].id, author_id: users.first.id },
+                     { title: 'To be', level: 0, category_id: categories[1].id, author_id: users[1].id },
+                     { title: 'Present Simple или Past Simple', level: 1, category_id: categories[1].id, author_id: users[1].id },
+                     { title: 'История античной и средневековой философии', level: 0, category_id: categories[2].id, author_id: users[2].id },
+                     { title: 'Социальная философия', level: 1, category_id: categories[2].id, author_id: users[2].id }])
 
 questions = Question.create([{ title: 'Истинность мысли по содержанию:', test_id: tests.first.id },
                              { title: 'Основная ошибка, возникающая при нарушении закона тождества — …', test_id: tests.first.id },
@@ -57,10 +57,10 @@ answers = Answer.create([ {title: 'Актуальность информации
                           {title: 'Всех сторон общественной жизни', correct: true, question_id: questions[11].id }])
 
 users_were_passing_tests = UsersWerePassingTest.create([{ user_id: users.first.id, test_id: tests.first.id},
-                                                        { user_id: users.first.id, test_id: tests[2].id, passing_now:true},
+                                                        { user_id: users.first.id, test_id: tests[2].id, passing_now: true },
                                                         { user_id: users.first.id, test_id: tests[4].id},
                                                         { user_id: users.first.id, test_id: tests[1].id, passing_now: true },
-                                                        { user_id: users.second.id, test_id: tests[2].id},
+                                                        { user_id: users.second.id, test_id: tests[2].id, passing_now: true},
                                                         { user_id: users.second.id, test_id: tests[3].id},
                                                         { user_id: users[2].id, test_id: tests[3].id, passing_now: true},
                                                         { user_id: users[2].id, test_id: tests[4].id, passing_now: true}])
