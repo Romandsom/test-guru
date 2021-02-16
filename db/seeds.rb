@@ -6,16 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-users = User.create([{ name: 'Ivanov' },{ name: 'Petrov' },{ name: 'Vasechkin' }])
+users = User.create([{ name: 'Ivanov', email: 'ivanov@gmail.com' },{ name: 'Petrov', email: 'petrov@gmail.com' },{ name: 'Vasechkin',
+  email: 'vasechkin@gmail.com' }])
 
 categories = Category.create([{ title: 'Логика' }, { title: 'Английский язык' }, { title: 'Философия' }])
 
-tests = Test.create([{ title: 'Основные законы логики', level: 0, category_id: categories.first.id, author_id: users.first.id },
-                     { title: 'Понятие ', level: 1, category_id: categories[0].id, author_id: users.first.id },
-                     { title: 'To be', level: 0, category_id: categories[1].id, author_id: users[1].id },
-                     { title: 'Present Simple или Past Simple', level: 1, category_id: categories[1].id, author_id: users[1].id },
-                     { title: 'История античной и средневековой философии', level: 0, category_id: categories[2].id, author_id: users[2].id },
-                     { title: 'Социальная философия', level: 1, category_id: categories[2].id, author_id: users[2].id }])
+tests = Test.create([{ title: 'Основные законы логики', level: 1, category_id: categories.first.id, author_id: users.first.id },
+                     { title: 'Понятие ', level: 2, category_id: categories[0].id, author_id: users.first.id },
+                     { title: 'To be', level: 1, category_id: categories[1].id, author_id: users[1].id },
+                     { title: 'Present Simple или Past Simple', level: 2, category_id: categories[1].id, author_id: users[1].id },
+                     { title: 'История античной и средневековой философии', level: 1, category_id: categories[2].id, author_id: users[2].id },
+                     { title: 'Социальная философия', level: 2, category_id: categories[2].id, author_id: users[2].id }])
 
 questions = Question.create([{ title: 'Истинность мысли по содержанию:', test_id: tests.first.id },
                              { title: 'Основная ошибка, возникающая при нарушении закона тождества — …', test_id: tests.first.id },
