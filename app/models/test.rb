@@ -4,8 +4,16 @@ class Test < ApplicationRecord
   has_many :users, through: :users_were_passing_tests
   has_many :users_were_passing_tests
   has_many :questions
-  
-  def self.category_request(category)
-    self.joins(:category).where(categories: {title: category}).order(title: :DESC).pluck('title')
+
+  scope :simple, -> { where(level: 0..1) }
+  scope :medium, -> { where(level: 2..4) } 
+  scope :hard, -> { where(level: 5..Float::INFINITY) } 
+  scope :tests_by_category, -> (category) { joins(:category).where(categories: {title: category}) }
+
+  validates :title, uniqueness: { scope: :level, message: "A test with this name and level already exists" }
+  validates :level, numericality: { only_integer: true, greater_than: 0 }
+
+  def self.tests_titles_by_category(category)
+    tests_by_category(category).order(title: :DESC).pluck('title')
   end
 end
