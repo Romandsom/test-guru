@@ -13,11 +13,7 @@ class Test < ApplicationRecord
   validates :title, uniqueness: { scope: :level, message: "A test with this name and level already exists" }
   validates :level, numericality: { only_integer: true, greater_than: 0 }
 
-  def self.category_request(category)
-    self.joins(:category).where(categories: {title: category}).order(title: :DESC).pluck('title')
-  end
-
-  def self.tests_titles_by_category 
-    tests_by_category.order(title: :DESC).pluck('title')
+  def self.tests_titles_by_category(category)
+    tests_by_category(category).order(title: :DESC).pluck('title')
   end
 end
