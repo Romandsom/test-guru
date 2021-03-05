@@ -1,8 +1,9 @@
 class QuestionsController < ApplicationController  
-  before_action :find_test, only: %i[index]
-  before_action :find_question, only: %i[index show]
+  before_action :find_question, only: %i[index show destroy create new]
+  before_action :find_test, only: %i[index show destroy create new]
+ 
   
-  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
+  # rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
    
   def index
   end
@@ -14,7 +15,6 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @test = Test.find(params[:test_id])
     @question = @test.questions.new(question_params)
 
     if @question.save
@@ -32,7 +32,7 @@ class QuestionsController < ApplicationController
   private
 
   def question_params
-    params.require(:question).permit(:title, :question_id)
+    params.require(:question).permit(:title, :test_id, :id)
   end  
 
   def find_test
@@ -43,7 +43,7 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
   end
 
-  def rescue_with_question_not_found
-    render plain: 'Question was not found'
-  end  
+  # def rescue_with_question_not_found
+  #   render plain: 'Question was not found'
+  # end  
 end
