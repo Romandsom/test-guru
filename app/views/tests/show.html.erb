@@ -1,0 +1,17 @@
+<h1><%= "Test title: #{@test.title}"%></h1> 
+<h2><%= "Test level: #{@test.level}"%></h2> 
+<p type="hidden"> <%number = 0%></p>
+<% @test.questions.each do |question| %>
+<p>
+№<%=number +=1 %>
+<%= question.title%>
+<%= link_to 'Edit', edit_question_path(question) %>
+</p>
+<% end %>
+<%= link_to 'Add question to the test', new_test_question_path(test_id: params[:id]) %><br>
+<%= link_to 'Back', tests_path %>
+
+
+
+
+
