@@ -30,7 +30,7 @@ class QuestionsController < ApplicationController
     @question = @test.questions.new(question_params)
 
     if @question.save
-      redirect_to controller: 'questions', action: 'index', id: @question.test_id
+      redirect_to test_questions_path(@question.test)
     else
       render plain: 'Error'
     end  
@@ -38,7 +38,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    redirect_to controller: 'questions', action: 'index', id: @question.test_id
+    redirect_to test_questions_path(@question.test)
   end  
 
   private

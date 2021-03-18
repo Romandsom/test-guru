@@ -1,13 +1,12 @@
 <h1><%= "Test title: #{@test.title}"%></h1> 
 <h2><%= "Test level: #{@test.level}"%></h2> 
 
-<p type="hidden"> <%number = 0%></p>
-<% @questions.each do |question| %>
+
+<% @questions.each_with_index do |question, index| %>
 <p>
-№<%=number +=1 %>
-<%= question.title%>
-<%= link_to 'Edit', edit_question_path(question) %>
-<%= link_to 'Delete',
+  <%= "№#{index+1} #{question.title}" %>
+  <%= link_to 'Edit', edit_question_path(question) %>
+  <%= link_to 'Delete',
             question_path(question),
             method: :delete,
             data: { confirm: 'Are you sure?' } %>
