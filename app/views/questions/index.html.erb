@@ -1,0 +1,19 @@
+<h1><%= "Test title: #{@test.title}"%></h1> 
+<h2><%= "Test level: #{@test.level}"%></h2> 
+
+
+<% @questions.each_with_index do |question, index| %>
+<p>
+  <%= "№#{index+1} #{question.title}" %>
+  <%= link_to 'Edit', edit_question_path(question) %>
+  <%= link_to 'Delete',
+            question_path(question),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %>
+</p>
+<% end %>
+
+<p>
+  <%= link_to 'Add new question to the test', new_test_question_path%>
+</p>
+
