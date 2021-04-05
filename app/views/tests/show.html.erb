@@ -3,6 +3,7 @@
 <% @test.questions.each_with_index do |question, index| %>
 <p>
   <%= "№#{index+1} #{question.title}" %>
+  <%= link_to 'Show', question_path(question) %>
   <%= link_to 'Edit', edit_question_path(question) %>
   <%= link_to 'Delete',
             question_path(question),
