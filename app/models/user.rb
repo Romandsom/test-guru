@@ -6,7 +6,8 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :email, presence: true
 
-  def passed_tests(level)
-    tests.where(level: level)
+  
+  def test_passage(test)
+    users_were_passing_tests.order(id: :desc).find_by(test_id: test.id)
   end
 end

@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 users = User.create([{ name: 'Ivanov', email: 'ivanov@gmail.com' },{ name: 'Petrov', email: 'petrov@gmail.com' },{ name: 'Vasechkin',
   email: 'vasechkin@gmail.com' }])
 
@@ -57,11 +49,11 @@ answers = Answer.create([ {title: 'Актуальность информации
                           {title: 'Материальной жизни общества', question_id: questions[11].id },
                           {title: 'Всех сторон общественной жизни', correct: true, question_id: questions[11].id }])
 
-users_were_passing_tests = UsersWerePassingTest.create([{ user_id: users.first.id, test_id: tests.first.id},
+users_were_passing_tests = UsersWerePassingTest.create([{ user_id: users.first.id, test_id: tests.first.id, correct_questions: 1, current_question_id: questions[1].id },
                                                         { user_id: users.first.id, test_id: tests[2].id, passing_now: true },
                                                         { user_id: users.first.id, test_id: tests[4].id},
-                                                        { user_id: users.first.id, test_id: tests[1].id, passing_now: true },
-                                                        { user_id: users.second.id, test_id: tests[2].id, passing_now: true},
+                                                        { user_id: users.first.id, test_id: tests[1].id, passing_now: true, current_question_id: questions[2].id },
+                                                        { user_id: users.second.id, test_id: tests[2].id, passing_now: true, current_question_id: questions[5].id },
                                                         { user_id: users.second.id, test_id: tests[3].id},
                                                         { user_id: users[2].id, test_id: tests[3].id, passing_now: true},
                                                         { user_id: users[2].id, test_id: tests[4].id, passing_now: true}])
