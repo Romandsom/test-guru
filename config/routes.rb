@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get :signup, to: 'users#new'
 
+  resources :users, only: :create
+
 
   resources :tests do
     resources :questions, shallow: true, exept: :index do
