@@ -6,4 +6,10 @@ module ApplicationHelper
   def year
     Time.current.year
   end  
+
+  def flash_message(key)
+    if flash[key]
+      content_tag :p, flash[key], class: 'flash message'
+    end
+  end
 end
