@@ -3,7 +3,7 @@ class Test < ApplicationRecord
   belongs_to :category
   has_many :users, through: :users_were_passing_tests
   has_many :users_were_passing_tests
-  has_many :questions
+  has_many :questions, dependent: :destroy
 
   scope :simple, -> { where(level: 0..1) }
   scope :medium, -> { where(level: 2..4) } 

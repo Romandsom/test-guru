@@ -1,20 +1,16 @@
 <h1><%= "Test title: #{@test.title}"%></h1> 
 <h2><%= "Test level: #{@test.level}"%></h2> 
 
-<p>
-  <%= link_to 'Create new question', new_admin_test_question_path(@test.id)  %>
-</p>
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Title</th>
+    <th colspan="3">Actions</th>
+  </tr>
 
-<% @test.questions.each_with_index do |question, index| %>
-<p>
-  <%= "№#{index+1} #{question.title}" %>
-  <%= link_to 'Show', admin_question_path(question) %>
-  <%= link_to 'Edit', edit_admin_question_path(question) %>
-  <%= link_to 'Delete',
-            admin_question_path(question),
-            method: :delete,
-            data: { confirm: 'Are you sure?' } %>
-</p>
-<% end %>
+<%= render @test.questions %>
+
+</table>
+
 <%= link_to 'Add question to the test', new_admin_test_question_path(test_id: params[:id]) %><br>
 <%= link_to 'Back', admin_tests_path %>

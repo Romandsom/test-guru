@@ -1,4 +1,4 @@
-class QuestionsController < ApplicationController
+class Admin::QuestionsController < Admin::BaseController
   before_action :find_test, only: %i[index create new]
   before_action :find_question, only: %i[show edit update destroy]
 
@@ -12,14 +12,10 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update(question_params)
-      redirect_to @question
+      redirect_to admin_question_path(@question)
     else 
       render :edit
     end  
-  end
-
-  def index
-    @questions = @test.questions
   end
 
   def new
@@ -30,15 +26,15 @@ class QuestionsController < ApplicationController
     @question = @test.questions.new(question_params)
 
     if @question.save
-      redirect_to test_questions_path(@question.test)
+      redirect_to admin_question_path(@question)
     else
-      render plain: 'Error'
+      render :new
     end  
   end
 
   def destroy
     @question.destroy
-    redirect_to test_questions_path(@question.test)
+    redirect_to admin_test_path(@question.test)
   end  
 
   private
