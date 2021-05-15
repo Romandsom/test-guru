@@ -1,2 +1,14 @@
 ru:
-  hello: 'Привет'
+
+  tests:
+    index:
+      header: "Доступные Тесты"
+
+  admin:
+    tests:
+      create:
+        success: "Тест успешно создан"
+      index:
+        header: "Доступные Тесты"
+        create: "Создать новый тест"
+
