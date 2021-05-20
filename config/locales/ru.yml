@@ -1,8 +1,31 @@
 ru:
 
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"    
+
+  shared:      
+    errors:
+      header: 
+        few: "Обнаружено %{count} ошибки" 
+        many: "Обнаружено %{count} ошибок" 
+        one: "Обнаружена %{count} ошибка" 
+        other: "Обнаружено %{count} ошибки"   
+
   tests:
     index:
       header: "Доступные Тесты"
+
+  users_were_passing_tests:
+    result:
+      header: "Тест %{title} завершен"    
 
   admin:
     tests:
@@ -10,5 +33,9 @@ ru:
         success: "Тест успешно создан"
       index:
         header: "Доступные Тесты"
-        create: "Создать новый тест"
+        create: "Создать новый тест" 
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы завершили тест на TestGuru!"                     
 
