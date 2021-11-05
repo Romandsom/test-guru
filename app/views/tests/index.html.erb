@@ -3,12 +3,12 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Level</th>
-      <th>Number of questions</th>
-      <th>Action</th>
+      <th><%= t('.title') %></th>
+      <th><%= t('.level') %></th>
+      <th><%= t('.number_of_questions') %></th>
+      <th><%= t('.action') %></th>
     </tr>
   </thead>  
 
-  <%=render @tests %>
+  <%= render @tests %>
 </table>

@@ -20,18 +20,100 @@ en:
   tests:
     index:
       header: "Tricky Tests"
+      title: "Title"
+      level: "Level"
+      number_of_questions: "Number of questions"
+      action: "Action"
+    test: 
+      start: "Start"
 
   users_were_passing_tests:
     result:
-      header: "Test %{title} is complete"    
+      header: "Test %{title} is complete" 
+      test_is_passed: "The test is passed!"   
+      test_is_failed: "The test is failed!"
+      result: "Result: %{result} %"
+      back_to_tests: "Back to tests"
 
   admin:
     tests:
       create:
         success: "Test was successfully created"
+      form:
+        back_to_tests: "Back to tests"
       index:
         header: "Tricky Tests"
-        create: "Create new test"    
+        title: "Title"
+        level: "Level"
+        number_of_questions: "Number of questions"
+        action: "Action"
+        create: "Create new test"  
+      edit:
+        edit_test: "Edit test: %{title}"  
+      show:
+        test_title: "Test title: %{title}"
+        level: "Test level: %{level}" 
+        number: "Number"
+        title: "Title"
+        actions: "Actions"      
+        add_question: "Add question to the test"
+        back: "Back"   
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        are_you_sure: "Are you sure?"  
+    nav:
+      admin_panel: "TestGuru Admin panel" 
+      welcome: "Welcome, %{current_user} Guru"
+      logout: "Logout"      
+
+
+    questions:
+      form: 
+        for_test: "For test"
+        back_to_test: "Back to test"
+      edit: 
+        header: "Editing question for test: %{test_title}"  
+      new:
+        header: "New question for test: %{test_title}"  
+      show:
+        header: "Question for test: %{test_title}"   
+        title: "Question title: %{question_title}"
+        answers: "Answers:"
+        new_answer: "New answer"
+        edit_question: "Edit question"
+        back_to_test: "Back to test"
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        are_you_sure: "Are you sure?"   
+            
+
+
+    answers:
+      new: 
+        header: "New answer"
+      update:
+        success: "Answer was successfully updated." 
+      create:
+        success: "Answer was successfully created."
+      edit:
+        header: "Edit answer"  
+      show:
+        question: "Question:"
+        answer: "Answer:"  
+        correct: "Correct:" 
+        back_to_question: "Back to question"   
+      form:
+        back_to_question: "Back to question"
+      answer:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        are_you_sure: "Are you sure?"        
+
 
   tests_mailer:
     completed_test:
