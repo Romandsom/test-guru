@@ -22,7 +22,6 @@ ru:
   tests:
     index:
       header: "Доступные Тесты"
-      start: "Начать тест"  
       title: "Название"
       level: "Уровень"
       number_of_questions: "Количество вопросов"
@@ -66,6 +65,8 @@ ru:
         edit: "Редактировать"
         delete: "Удалить"
         are_you_sure: "Вы уверены?" 
+      new:
+        create: "Создать тест"
     nav:
       admin_panel: "TestGuru Панель администратора" 
       welcome: "Добро пожаловать, %{current_user} Гуру"
@@ -74,7 +75,6 @@ ru:
 
     questions:
       form: 
-        for_test: "Для теста"
         back_to_test: "Назад к тесту"
       edit: 
         header: "Редактируем вопрос для теста: %{test_title}"  
@@ -96,7 +96,7 @@ ru:
 
     answers:
       new: 
-        header: "Новый вопрос"
+        header: "Новый ответ"
       update:
         success: "Вопрос был успешно обновлен."  
       create:
@@ -114,10 +114,5 @@ ru:
         show: "Показать"
         edit: "Изменить"
         delete: "Удалить"
-        are_you_sure: "Вы уверены?"        
-            
-
-  tests_mailer:
-    completed_test:
-      subject: "Вы завершили тест на TestGuru!"                     
+        are_you_sure: "Вы уверены?"                  
 

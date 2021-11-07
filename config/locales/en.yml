@@ -63,6 +63,8 @@ en:
         edit: "Edit"
         delete: "Delete"
         are_you_sure: "Are you sure?"  
+      new:
+        create: "Create test"
     nav:
       admin_panel: "TestGuru Admin panel" 
       welcome: "Welcome, %{current_user} Guru"
@@ -71,7 +73,6 @@ en:
 
     questions:
       form: 
-        for_test: "For test"
         back_to_test: "Back to test"
       edit: 
         header: "Editing question for test: %{test_title}"  
@@ -112,9 +113,4 @@ en:
         show: "Show"
         edit: "Edit"
         delete: "Delete"
-        are_you_sure: "Are you sure?"        
-
-
-  tests_mailer:
-    completed_test:
-      subject: "You just completed the TestGuru test!"   
+        are_you_sure: "Are you sure?"  
