@@ -1,15 +1,32 @@
 en:
 
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
+# дописать хелпер и label
   helpers:
     submit:
       test:
         create: "Create test"
         update: "Update test"
+        start: "Start test!"
+      question:
+        create: "Create qutstion"
+        update: "Update question"
+      answer:
+        create: "Create answer
+        update: "Update unswer"  
     label:
       test:
         title: "Title"
         level: "Level"
         category_id: "Category"  
+      question:
+        title: "Title"
+        test_id: "Test id"
+      answer:
+        title: "Title"
+        correct: "Correct"          
         
   shared:      
     errors:

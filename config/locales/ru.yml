@@ -1,15 +1,33 @@
 ru:
 
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"
+
   helpers:
     submit:
       test:
         create: "Создать тест"
         update: "Обновить тест"
+        start: "Начать тест!"
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"    
+      
     label:
       test:
         title: "Название"
         level: "Уровень"
-        category_id: "Категория"    
+        category_id: "Категория"  
+      question:
+        title: "Название"
+        test_id: "Для теста"
+      answer:
+        title: "Название"
+        correct: "Правильный ответ"        
 
   shared:      
     errors:
