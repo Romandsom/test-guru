@@ -1,2 +1,136 @@
 ru:
-  hello: 'Привет'
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+        start: "Начать тест!"
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"    
+      
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"  
+      question:
+        title: "Название"
+        test_id: "Для теста"
+      answer:
+        title: "Название"
+        correct: "Правильный ответ"        
+
+  shared:      
+    errors:
+      header: 
+        few: "Обнаружено %{count} ошибки" 
+        many: "Обнаружено %{count} ошибок" 
+        one: "Обнаружена %{count} ошибка" 
+        other: "Обнаружено %{count} ошибки"   
+
+  tests:
+    index:
+      header: "Доступные Тесты"
+      title: "Название"
+      level: "Уровень"
+      number_of_questions: "Количество вопросов"
+      action: "Действие"
+    test: 
+      start: "Начать тест"    
+
+  users_were_passing_tests:
+    result:
+      header: "Тест %{title} завершен"
+      test_is_passed: "Тест успешно сдан!"  
+      test_is_failed: "Тест не пройден."
+      result: "Результат: %{result} %"
+      back_to_tests: "Назад к списку тестов"
+
+  admin:
+    tests:
+      create:
+        success: "Тест был успешно создан"
+      form:
+        back_to_tests: "Назад к тестам"
+      index:
+        header: "Список тестов"
+        title: "Название"
+        level: "Уровень"
+        number_of_questions: "Количество вопросов"
+        action: "Действие"
+        create: "Создать новый тест"  
+      edit:
+        edit_test: "Редактировать тест: %{title}"  
+      show:
+        test_title: "Название теста: %{title}"
+        level: "Уровень теста: %{level}" 
+        number: "Номер"
+        title: "Название"
+        actions: "Действия"      
+        add_question: "Добавить вопрос к тесту"
+        back: "Назад"   
+      test:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        are_you_sure: "Вы уверены?" 
+      new:
+        create: "Создать тест"
+    nav:
+      admin_panel: "TestGuru Панель администратора" 
+      welcome: "Добро пожаловать, %{current_user} Гуру"
+      logout: "Выйти"  
+        
+
+    questions:
+      form: 
+        back_to_test: "Назад к тесту"
+      edit: 
+        header: "Редактируем вопрос для теста: %{test_title}"  
+      new:
+        header: "Новый вопрос для теста: %{test_title}"  
+      show:
+        header: "Вопрос для теста: %{test_title}"   
+        title: "Текст вопроса: %{question_title}"
+        answers: "Ответы:"
+        new_answer: "Новый ответ"
+        edit_question: "Редактировать вопрос"
+        back_to_test: "Назад к тесту"
+      question:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        are_you_sure: "Вы уверены?" 
+            
+
+    answers:
+      new: 
+        header: "Новый ответ"
+      update:
+        success: "Вопрос был успешно обновлен."  
+      create:
+        success: "Ответ был успешно создан." 
+      edit:
+        header: "Редактировать ответ"    
+      show:
+        question: "Вопрос:"
+        answer: "Ответ:"  
+        correct: "Правильный ответ:" 
+        back_to_question: "Назад к вопросу"     
+      form:
+        back_to_question: "Назад к вопросу"  
+      answer:
+        show: "Показать"
+        edit: "Изменить"
+        delete: "Удалить"
+        are_you_sure: "Вы уверены?"                  
+

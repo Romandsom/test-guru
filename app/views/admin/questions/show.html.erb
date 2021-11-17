@@ -1,14 +1,14 @@
-<h1>Question theme: <%= @question.test.title %></h1>
+<h1><%= t('.header', test_title: @question.test.title) %></h1>
 
-<h2>Question title: <%=@question.title%></h2>  
+<h2><%= t('.title', question_title: @question.title) %></h2>  
 
-<h3>Answers</h3>
+<h3><%= t('.answers') %>></h3>
 
-<%= link_to 'New answer', new_admin_question_answer_path(@question) %>
+<%= link_to t('.new_answer'), new_admin_question_answer_path(@question) %>
 
 <ol>
   <%= render @question.answers %>
 </ol>
 
-<%= link_to 'Edit question', edit_admin_question_path(@question) %>
- <p><%= link_to 'Back to test', admin_test_path(@question.test.id) %></p>
+<%= link_to t('.edit_question'), edit_admin_question_path(@question) %>
+ <p><%= link_to t('.back_to_test'), admin_test_path(@question.test.id) %></p>
