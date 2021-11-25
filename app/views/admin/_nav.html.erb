@@ -2,7 +2,7 @@
   <%= link_to "TestGuru Admin panel", admin_root_path, class: 'navbar-brand' %>
 
   <span class="navbar-text"> 
-    Welcome, <b><%= current_user.first_name %></b> Guru
+    Welcome, <b><%= current_user.name %></b> Guru
     <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
   </span>
 </nav>
