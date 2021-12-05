@@ -1,6 +1,7 @@
 <h1><%= t('.header') %></h1>
 
 <table>
+<table class="table table-stripped table-dark text-center">
   <thead>
     <tr>
       <th><%= t('.title') %></th>
@@ -13,4 +14,4 @@
   <%=render @tests %>
 </table>
 
-<%= link_to t('.create'), new_admin_test_path %>
+<%= link_to t('.create'), new_admin_test_path, class: 'btn btn-success' %>

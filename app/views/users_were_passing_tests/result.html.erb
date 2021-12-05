@@ -1,14 +1,14 @@
-<h1><%= t('.header', title: @test_passage.test.title) %></h1>
+<h1 class="text"><%= t('.header', title: @test_passage.test.title) %></h1>
 
 <p>
   <% if @test_passage.success? %>
-    <p class="win">
+    <p class="text-succces">
       <b><%= t('.test_is_passed') %></b>
       <%= t('.result', result: @test_passage.results) %>
 
     </p>
   <% else %>
-    <p class="fail">
+    <p class="text-danger">
       <b><%= t('.test_is_failed') %></b>
       <%= t('.result', result: @test_passage.results) %>
     </p>
