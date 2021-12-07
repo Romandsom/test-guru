@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :users_were_passing_tests, on: %i[show update] do 
     member do
       get :result
+      post :gist
     end
   end   
   
