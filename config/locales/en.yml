@@ -32,7 +32,9 @@ en:
     errors:
       header: 
         one: "%{count} error detected"
-        other: "%{count} errors detected"   
+        other: "%{count} errors detected" 
+        
+  description: "A question about %{title} from testGuru"        
 
   tests:
     index:
@@ -51,6 +53,9 @@ en:
       test_is_failed: "The test is failed!"
       result: "Result: %{result} %"
       back_to_tests: "Back to tests"
+    gist:
+      success: 'Gist was successfully created! %{gist_url}'
+      failure: 'An error occurred while saving gist'  
 
   admin:
     tests:
@@ -107,7 +112,13 @@ en:
         edit: "Edit"
         delete: "Delete"
         are_you_sure: "Are you sure?"   
-            
+    gists:
+      index:
+        header: 'Gists list'
+        question: 'Question'
+        gist_url: 'Gist URL'
+        email: 'User Email'
+        back: 'Back'        
 
 
     answers:
