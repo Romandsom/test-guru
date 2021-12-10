@@ -31,6 +31,10 @@ gem 'faraday'
 
 gem "octokit", "~> 4.0"
 
+#ENVIRONMENT VARIABLES
+
+gem 'dotenv-rails', groups: [:development, :test]
+
 # LOCALIZATION
 
 gem 'rails-i18n', '~>6.0.0'
