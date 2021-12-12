@@ -35,7 +35,8 @@ ru:
         few: "Обнаружено %{count} ошибки" 
         many: "Обнаружено %{count} ошибок" 
         one: "Обнаружена %{count} ошибка" 
-        other: "Обнаружено %{count} ошибки"   
+        other: "Обнаружено %{count} ошибки"  
+  description: "Вопрос из теста %{title} сервиса testGuru"       
 
   tests:
     index:
@@ -54,6 +55,9 @@ ru:
       test_is_failed: "Тест не пройден."
       result: "Результат: %{result} %"
       back_to_tests: "Назад к списку тестов"
+    gist:
+      success: 'Gist был успешно создан! %{gist_url}'
+      failure: 'При создании Gist произошла ошибка'  
 
   admin:
     tests:
@@ -110,6 +114,13 @@ ru:
         edit: "Редактировать"
         delete: "Удалить"
         are_you_sure: "Вы уверены?" 
+    gists:
+      index:
+        header: 'Список Gists'
+        question: 'Вопрос'
+        gist_url: 'Ссылка на Gist'
+        email: 'Email пользователя'
+        back: 'Назад к списку тестов'    
             
 
     answers:
