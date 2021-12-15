@@ -40,6 +40,7 @@ en:
     index:
       header: "Tricky Tests"
       title: "Title"
+      test_id: "Number"
       level: "Level"
       number_of_questions: "Number of questions"
       action: "Action"
@@ -65,6 +66,7 @@ en:
         back_to_tests: "Back to tests"
       index:
         header: "Tricky Tests"
+        test_id: "Number"
         title: "Title"
         level: "Level"
         number_of_questions: "Number of questions"

@@ -42,6 +42,7 @@ ru:
     index:
       header: "Доступные Тесты"
       title: "Название"
+      test_id: "Номер"
       level: "Уровень"
       number_of_questions: "Количество вопросов"
       action: "Действие"
@@ -67,6 +68,7 @@ ru:
         back_to_tests: "Назад к тестам"
       index:
         header: "Список тестов"
+        test_id: "Номер"
         title: "Название"
         level: "Уровень"
         number_of_questions: "Количество вопросов"
