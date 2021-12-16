@@ -5,6 +5,15 @@
   of <%= @test_passage.test.questions.count %>
 </p>
 
+<div class="progress">
+    <%= content_tag :div, "", class: 'progress-bar bg-success progress-bar-striped',
+                    data: { current_question: @passage_test.test_current_question,
+                            total_questions: @passage_test.test.questions.count },
+                    role: 'progressbar',
+                    value: @passage_test.test_current_question,
+                    max: @passage_test.test.questions.count %>
+</div>
+
 <div class="card border-primary">
   <div class="card-header">
     <b>
