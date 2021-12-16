@@ -60,6 +60,8 @@ en:
 
   admin:
     tests:
+      update_inline:
+        success: ""
       create:
         success: "Test was successfully created"
       form:
