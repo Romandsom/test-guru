@@ -5,6 +5,14 @@ class Admin::TestsController < Admin::BaseController
 
   def show
   end
+  
+  def update_inline
+    if @test.update(test_params)
+      redirect_to admin_tests_path
+    else
+      render :index
+    end
+  end
 
   def index
     @tests = Test.all
@@ -41,6 +49,10 @@ class Admin::TestsController < Admin::BaseController
   end
 
   private
+  
+  def set_tests
+    @tests = Test.all
+  end
 
   def find_test
     @test = Test.find(params[:id])
