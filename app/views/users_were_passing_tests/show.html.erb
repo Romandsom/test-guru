@@ -7,11 +7,11 @@
 
 <div class="progress">
     <%= content_tag :div, "", class: 'progress-bar bg-success progress-bar-striped',
-                    data: { current_question: @passage_test.test_current_question,
-                            total_questions: @passage_test.test.questions.count },
+                    data: { current_question: @test_passage.test_current_question,
+                            total_questions: @test_passage.test.questions.count },
                     role: 'progressbar',
-                    value: @passage_test.test_current_question,
-                    max: @passage_test.test.questions.count %>
+                    value: @test_passage.test_current_question,
+                    max: @test_passage.test.questions.count %>
 </div>
 
 <div class="card border-primary">
