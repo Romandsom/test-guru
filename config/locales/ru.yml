@@ -62,6 +62,8 @@ ru:
 
   admin:
     tests:
+      update_inline:
+        success: ""
       create:
         success: "Тест был успешно создан"
       form:
