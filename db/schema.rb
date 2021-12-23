@@ -12,10 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2021_04_23_113604) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "answers", force: :cascade do |t|
     t.string "title", null: false
     t.boolean "correct", default: false
-    t.integer "question_id"
+    t.bigint "question_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["question_id"], name: "index_answers_on_question_id"
@@ -29,7 +32,7 @@ ActiveRecord::Schema.define(version: 2021_04_23_113604) do
 
   create_table "questions", force: :cascade do |t|
     t.string "title", null: false
-    t.integer "test_id"
+    t.bigint "test_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["test_id"], name: "index_questions_on_test_id"
@@ -38,10 +41,10 @@ ActiveRecord::Schema.define(version: 2021_04_23_113604) do
   create_table "tests", force: :cascade do |t|
     t.string "title", null: false
     t.integer "level", default: 1
-    t.integer "category_id"
+    t.bigint "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "author_id", null: false
+    t.bigint "author_id", null: false
     t.index ["author_id"], name: "index_tests_on_author_id"
     t.index ["category_id"], name: "index_tests_on_category_id"
     t.index ["title", "level"], name: "index_tests_on_title_and_level", unique: true
@@ -74,12 +77,12 @@ ActiveRecord::Schema.define(version: 2021_04_23_113604) do
   end
 
   create_table "users_were_passing_tests", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "test_id"
+    t.bigint "user_id"
+    t.bigint "test_id"
     t.boolean "passing_now", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "current_question_id"
+    t.bigint "current_question_id"
     t.integer "correct_questions", default: 0
     t.index ["current_question_id"], name: "index_users_were_passing_tests_on_current_question_id"
     t.index ["test_id"], name: "index_users_were_passing_tests_on_test_id"
