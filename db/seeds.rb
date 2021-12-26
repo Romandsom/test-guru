@@ -1,5 +1,6 @@
-users = User.create([{ name: 'Ivanov', email: 'ivanov@gmail.com' },{ name: 'Petrov', email: 'petrov@gmail.com' },{ name: 'Vasechkin',
-  email: 'vasechkin@gmail.com' }])
+users = User.create([{ name: 'Ivan', email: 'ivanov@gmail.com', last_name: 'Ivanov', password: 'ivanov'},
+                     { name: 'Petrov', email: 'petrov@gmail.com', last_name: 'Petrov', password: 'petrov'},
+                     { name: 'Vasechkin', email: 'vasechkin@gmail.com', last_name: 'Vasechkin', password: 'vasechkin'}])
 
 categories = Category.create([{ title: 'Логика' }, { title: 'Английский язык' }, { title: 'Философия' }])
 

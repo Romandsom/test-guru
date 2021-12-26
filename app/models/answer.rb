@@ -5,7 +5,7 @@ class Answer < ApplicationRecord
 
   validates :title, presence: true
 
-  validate :answer_max_range, on: :create
+  # validate :answer_max_range, on: :create
 
   private
   def answer_max_range
