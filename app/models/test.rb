@@ -2,7 +2,7 @@ class Test < ApplicationRecord
   belongs_to :author, class_name: "User"
   belongs_to :category
   has_many :users, through: :users_were_passing_tests
-  has_many :users_were_passing_tests
+  has_many :users_were_passing_tests, dependent: :nullify
   has_many :questions, dependent: :destroy
 
   scope :simple, -> { where(level: 0..1) }
