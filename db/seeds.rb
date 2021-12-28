@@ -1,4 +1,4 @@
-users = User.create([{ name: 'Ivan', email: 'ivanov@gmail.com', last_name: 'Ivanov', password: 'ivanov'},
+users = User.create([{ name: 'Ivan', email: 'ivanov@gmail.com', last_name: 'Ivanov', password: 'ivanov', type: 'Admin'},
                      { name: 'Petrov', email: 'petrov@gmail.com', last_name: 'Petrov', password: 'petrov'},
                      { name: 'Vasechkin', email: 'vasechkin@gmail.com', last_name: 'Vasechkin', password: 'vasechkin'}])
 
