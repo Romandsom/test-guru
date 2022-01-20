@@ -54,8 +54,7 @@ ActiveRecord::Schema.define(version: 2021_12_27_080520) do
     t.bigint "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "author_id", null: false
-    t.index ["author_id"], name: "index_tests_on_author_id"
+    t.integer "author_id"
     t.index ["category_id"], name: "index_tests_on_category_id"
     t.index ["title", "level"], name: "index_tests_on_title_and_level", unique: true
   end
@@ -103,7 +102,6 @@ ActiveRecord::Schema.define(version: 2021_12_27_080520) do
   add_foreign_key "feedbacks", "users"
   add_foreign_key "questions", "tests"
   add_foreign_key "tests", "categories"
-  add_foreign_key "tests", "users", column: "author_id"
   add_foreign_key "users_were_passing_tests", "questions", column: "current_question_id"
   add_foreign_key "users_were_passing_tests", "tests"
   add_foreign_key "users_were_passing_tests", "users"
