@@ -28,6 +28,10 @@ class UsersWerePassingTest < ApplicationRecord
     results >=PASSING_LIMIT
   end
 
+  def test_current_question
+    test.questions.count - test.questions.order(:id).where('id > ?', current_question.id).count
+  end
+
   def question_number(question)
     test.questions.find_index(question).to_i + 1
   end
