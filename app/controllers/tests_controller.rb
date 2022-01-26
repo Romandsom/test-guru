@@ -12,7 +12,7 @@ class TestsController < ApplicationController
   def start
     if @test.questions.present?
       current_user.tests.push(@test)
-      redirect_to current_user.passage_test(@test)
+      redirect_to current_user.test_passage(@test)
     else
       redirect_to root_path, notice: "Sorry, Test doesn't consist any question"
     end
