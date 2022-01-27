@@ -1,14 +1,15 @@
-users = User.create([{ name: 'Ivanov', email: 'ivanov@gmail.com' },{ name: 'Petrov', email: 'petrov@gmail.com' },{ name: 'Vasechkin',
-  email: 'vasechkin@gmail.com' }])
+users = User.create([{ name: 'Ivan', email: 'ivanov@gmail.com', last_name: 'Ivanov', password: 'ivanov', type: 'Admin'},
+                     { name: 'Petrov', email: 'petrov@gmail.com', last_name: 'Petrov', password: 'petrov'},
+                     { name: 'Vasechkin', email: 'vasechkin@gmail.com', last_name: 'Vasechkin', password: 'vasechkin'}])
 
 categories = Category.create([{ title: 'Логика' }, { title: 'Английский язык' }, { title: 'Философия' }])
 
-tests = Test.create([{ title: 'Основные законы логики', level: 1, category_id: categories.first.id, author_id: users.first.id },
-                     { title: 'Понятие ', level: 2, category_id: categories[0].id, author_id: users.first.id },
-                     { title: 'To be', level: 1, category_id: categories[1].id, author_id: users[1].id },
-                     { title: 'Present Simple или Past Simple', level: 2, category_id: categories[1].id, author_id: users[1].id },
-                     { title: 'История античной и средневековой философии', level: 1, category_id: categories[2].id, author_id: users[2].id },
-                     { title: 'Социальная философия', level: 2, category_id: categories[2].id, author_id: users[2].id }])
+tests = Test.create([{ title: 'Основные законы логики', level: 1, category_id: categories.first.id, author: users.first },
+                     { title: 'Понятие ', level: 2, category_id: categories[0].id, author: users.first },
+                     { title: 'To be', level: 1, category_id: categories[1].id, author: users[1] },
+                     { title: 'Present Simple или Past Simple', level: 2, category_id: categories[1].id, author: users[1] },
+                     { title: 'История античной и средневековой философии', level: 1, category_id: categories[2].id, author: users[2] },
+                     { title: 'Социальная философия', level: 2, category_id: categories[2].id, author: users[2] }])
 
 questions = Question.create([{ title: 'Истинность мысли по содержанию:', test_id: tests.first.id },
                              { title: 'Основная ошибка, возникающая при нарушении закона тождества — …', test_id: tests.first.id },

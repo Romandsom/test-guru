@@ -25,7 +25,7 @@ class UsersWerePassingTestsController < ApplicationController
   end
 
   def update
-    @test_passage.accept!(params[:answer_ids])
+    @test_passage.accept!(params[:answer_ids]) if params[:answer_ids]
 
     if @test_passage.completed?
       TestsMailer.completed_test(@test_passage).deliver_now
