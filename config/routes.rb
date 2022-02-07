@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   resources :feedbacks, only: %i[new create]
 
+  resources :badges, only: %i[index show]
+
   resources :users_were_passing_tests, on: %i[show update] do 
     member do
       get :result
@@ -32,5 +34,6 @@ Rails.application.routes.draw do
       end
     end
     resources :gists, only: :index
+    resources :badges
   end
 end

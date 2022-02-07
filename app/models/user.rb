@@ -13,6 +13,7 @@ class User < ApplicationRecord
   has_many :own_tests, class_name: 'Test', foreign_key: 'author_id'
   has_many :gists, dependent: :destroy
   has_many :feedbacks
+  has_and_belongs_to_many :badges, depend: :destroy
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i.freeze
 
