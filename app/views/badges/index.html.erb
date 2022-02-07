@@ -1,0 +1,9 @@
+<h3 class="mt-5 text-center"> Actual badges </h3>
+
+<%if @badges.exists? %>
+  <table class="text-center mt-5">
+    <tr> <%= render @badges.distinct %> </tr>
+  </table>
+<%else%>
+  <h2 class="mt-5 text-center"> None badges for now</h2>
+<%end%>
